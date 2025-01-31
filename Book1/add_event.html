@@ -20,6 +20,19 @@
         positionElement.innerHTML = `x: ${x}; y: ${y}`;
       }
     </script>
+    <style>
+      #tracking-area {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1 id="current-position"></h1>
+    <div id="tracking-area">
+      Move your mouse in here. If it's not working, click inside this box and
+      try again.
+    </div>
+  </body>
 </html>
