@@ -24,12 +24,12 @@
           request.onerror = function () {
             reject(Error("There was a network error."));
           };
-          request.senc();
+          request.send();
         });
       }
       const displayArea = document.getElementById("text-display-area");
 
-      bookLoad("https://www.gutenberg.org/files/2701/2701-0.txt").then(
+      bookLoad("mobydick.txt").then(
         function (response) {
           displayArea.innerText = response;
         },
