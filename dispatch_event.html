@@ -10,10 +10,14 @@
     <script>
       const focusEvent = new Event("focus");
       const testInput = document.getElementById("test-text");
+      const event = new CustomEvent("click", { detail: new Date() });
       testInput.addEventListener("focus", (e) => {
         testInput.focus();
         console.log(`${e.target.value}`);
         console.log(`The active element is: ${document.activeElement.id}`);
+      });
+      testInput.addEventListener("click", (e) => {
+        console.log(`Clicked at`, e.detail);
       });
       testInput.dispatchEvent(focusEvent);
     </script>
