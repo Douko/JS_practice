@@ -27,3 +27,9 @@ function doProcessing() {
 }
 
 doProcessing();
+//Promisifying
+const promisifiedSetTimeout = function (ms) {
+  return new Promise(function (res) {
+    return setTimeout(res, ms);
+  });
+};
