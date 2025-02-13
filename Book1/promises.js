@@ -46,3 +46,26 @@ async function doProcessingAsync() {
 }
 
 doProcessingAsync();
+//Handling errors with async/await
+async function openBook() {
+  try {
+    const bookText = await bookLoad("mobydick.txt");
+    displayArea.innerText = bookText;
+  } catch (e) {
+    displayArea.innerText = e;
+  }
+}
+
+//Catching errors with fetch()
+async function fetchTheData(url) {
+  try {
+    const response = await fetch(url);
+    if (response.status >= 200 && response.status <= 299) {
+      return response.json();
+    } else {
+      throw Error(response.statusText);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
