@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFTER</title>
+    <style>
+      fieldset {
+        display: inline;
+      }
+      fieldset > * {
+        display: block;
+      }
+
+      input:invalid + span::after {
+        content: "\2717";
+        color: red;
+      }
+      input:valid + span::after {
+        content: "\2713";
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>das:</legend>
+      <label for="user-name">Name:</label>
+      <input id="user-name" type="text" required />
+      <span></span>
+
+      <label for="user-email">Email:</label>
+      <input
+        id="user-email"
+        type="email"
+        placeholder="e.g., you@domain.com"
+        required
+      />
+      <span></span>
+    </fieldset>
+  </body>
+</html>
