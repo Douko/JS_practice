@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div><p id="timer"></p></div>
+    <script>
+      let inners = document.getElementById("timer");
+      rtime = () => Date();
+      ctext = console.log("sa");
+      //inner.innerText = rtime();
+      //inners.innerText = Date.now();
+      minutesMil = Date.now() % (3600 * 1000);
+      inter = function () {
+        minutesMil = Date.now() % (3600 * 1000);
+        minutes = Math.floor(minutesMil / (60 * 1000));
+        minutes = String(minutes).padStart(2, "0");
+        seconds = Math.floor(minutesMil / 1000) % 60;
+        seconds = String(seconds).padStart(2, "0");
+        centisegundos = Math.floor(minutesMil / 10) % 100;
+        centisegundos = String(centisegundos).padStart(2, "0");
+        return (inners.innerText = `${minutes}: ${seconds}: ${centisegundos}`);
+      };
+      //inter = () => (inners.innerText = Date.now() % (3600 * 1000));
+      setInterval(inter, 10);
+      seconds_2 = setInterval(() => Math.floor(minutesMil / 1000) % 60, 1000);
+      //setInterval(() => console.log(seconds_2), 1000);
+    </script>
+  </body>
+</html>

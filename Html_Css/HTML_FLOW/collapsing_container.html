@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    article {
+      border: solid;
+    }
+    section {
+      float: left;
+      width: 25rem;
+    }
+    aside {
+      float: right;
+      width: 16rem;
+      background-color: gray;
+      padding: 4ch;
+    }
+    .self-clear::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+  <body>
+    <article class="self-clear">
+      <section>
+        An awfully long time ago xx xxx xxxxx xxxxxx xxxx xxxxx xx xxxx xxxx
+        xxxxx xxxx xxxxxxxxx xx x xxxxx xxx xx xxxxxxx xxxtx xxxxx xxxxxxxsss
+      </section>
+      <aside>
+        <b>Note:</b> Creating a new word by xxxxxx xxxx xxxxx xx xxxx xxxx xxxxx
+        xxxx xxxxxxxxx xx x xxxxx xxx xx xxxxxxx xxxx xxxxx xxxxxxx
+      </aside>
+    </article>
+  </body>
+</html>
