@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        width: 1000x;
+        border: 5px double black;
+      }
+      .item {
+        width: 200px;
+        text-align: center;
+      }
+      .item1 {
+        background-color: hsl(0, 0%, 94%);
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 300px;
+        min-width: 200px;
+        max-width: 400px;
+      }
+      .item2 {
+        background-color: hsl(0, 0%, 82%);
+      }
+      .item3 {
+        background-color: hsl(0, 0%, 70%);
+      }
+      .item4 {
+        background-color: hsl(0, 0%, 58%);
+      }
+      .item5 {
+        background-color: hsl(0, 0%, 46%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+    </div>
+  </body>
+</html>

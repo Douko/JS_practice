@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        position: relative;
+        z-index: 2;
+        background-color: gray;
+        height: 300px;
+        width: 300px;
+      }
+      #div2 {
+        position: relative;
+        bottom: 100px;
+        left: 100px;
+        z-index: 1;
+        background-color: yellow;
+        height: 300px;
+        width: 300px;
+      }
+      aside {
+        position: relative;
+        top: 25px;
+        left: 80px;
+        z-index: 3;
+        background-color: red;
+        height: 300px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <span>div1</span>
+    </div>
+    <div id="div2">
+      <span>div2</span>
+      <aside>
+        <span>aside</span>
+      </aside>
+    </div>
+  </body>
+</html>
