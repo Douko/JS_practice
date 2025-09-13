@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="grid_css/grid.css" />
     <link rel="stylesheet" href="grid_css/grid_750.css" />
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
+    <?php include 'private/loadImages.php'; ?>
   </head>
   <body>
     <div class="container">
@@ -30,7 +32,7 @@
         <a>Contact</a>
       </div>
       <div class="item item5" id="image_load">
-        <img />
+        <?php echo loadImages($dir_image_covers, '240px'); ?>
       </div>
       <div class="item item6">
         <div class="recomendations">1</div>
@@ -40,5 +42,4 @@
       <div class="item item7">7</div>
     </div>
   </body>
-  <script src="public/main.js"></script>
 </html>
