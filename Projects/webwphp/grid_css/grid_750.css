@@ -25,7 +25,7 @@
   .item11 {
     height: 100%;
   }
-  img {
+  .item11 > button > img {
     height: 50px;
   }
   .item1 {
