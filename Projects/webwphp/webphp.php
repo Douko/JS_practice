@@ -26,7 +26,7 @@
       <div class="item item2">2</div>
       <div class="item item3">3</div>
       <div class="item item4">
-        <a>Home</a>
+        <a>Home</a>  
         <a>Features</a>
         <a>Help</a>
         <a>Contact</a>
@@ -42,4 +42,5 @@
       <div class="item item7">7</div>
     </div>
   </body>
+  <script src = 'public/main.js'></script>
 </html>
