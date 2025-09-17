@@ -8,7 +8,7 @@
   height: calc(100vh - 16px); /*Gana 8px en la parte de arriba y abajo*/
   width: 100%;
   gap: 16px; /*16px para centrar los objetos
-    y anular el margin -8px que usamos para centrar el container*/
+      y anular el margin -8px que usamos para centrar el container*/
 }
 .item {
   font-family: Verdana, sans-serif;
@@ -55,6 +55,22 @@
   grid-template-columns: 1fr 1.75fr 1fr;
   grid-template-rows: 1fr;
 }
+.item6 > #recomendations {
+  align-content: baseline;
+  text-align: left;
+}
+#recomendations > div {
+  border-radius: 8px;
+  margin: 10px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.67);
+}
+#recomendations > div:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+#recomendations > div:active {
+  background-color: hsla(0, 0%, 100%, 0.4);
+}
 .item7 {
   background-color: hsl(0, 0%, 22%);
   grid-column: 1/4;
@@ -71,7 +87,7 @@
   }
 }
 @media (max-width: 1000px) {
-  .item6 > .recomendations {
+  .item6 > #recomendations {
     display: none;
   }
   .item6 {

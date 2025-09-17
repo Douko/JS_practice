@@ -1,0 +1,49 @@
+@media (max-width: 750px) {
+  .item6 > #recomendations,
+  .feedback {
+    display: none;
+  }
+  .item6 {
+    grid-template-columns: 1fr;
+    grid-column: 1/4;
+  }
+  .item4 {
+    display: none;
+  }
+  .item5 {
+    border: solid;
+    grid-row: 2/4;
+  }
+  .container {
+    grid-template-rows: 3fr 0% 6fr 18.8fr 0.6fr;
+    grid-template-columns: 2fr 4fr 2fr;
+  }
+  .item1 > div {
+    align-content: center;
+    display: inline-block;
+  }
+  .item11 {
+    height: 100%;
+  }
+  img {
+    height: 50px;
+  }
+  .item1 {
+    grid-template-columns: 1fr 2fr;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 85%);
+  }
+  .list1 a {
+    display: block;
+  }
+  .item11:hover button {
+    background-color: hsl(0, 0%, 70%);
+  }
+  .item11:hover .list1 {
+    background-color: hsl(0, 0%, 58%);
+    display: block;
+  }
+}

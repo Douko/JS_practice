@@ -1,5 +1,5 @@
 @media (max-width: 750px) {
-  .item6 > .recomendations,
+  .item6 > #recomendations,
   .feedback {
     display: none;
   }
