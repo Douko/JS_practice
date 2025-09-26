@@ -45,18 +45,29 @@ body {
   grid-column: 1/4;
   grid-row: 3;
   line-height: 0; /*reason why*/
+  width: 100%;
+  margin: auto;
+}
+.banner {
+  position: relative;
+  margin: auto;
 }
 .overlapping_child {
   border: solid black;
   z-index: 1;
   position: absolute;
   background-color: transparent;
+  width: 50%;
+  margin: auto;
+}
+.overlapping_child > * {
+  background-color: transparent;
+  position: relative;
 }
 #image_load > img {
   border: solid black;
   margin-bottom: 0px; /*why?*/
   display: none;
-  position: static;
 }
 .item6 {
   background-color: hsl(0, 0%, 34%);
@@ -79,6 +90,9 @@ body {
   .item6 {
     grid-template-columns: 20rem 60rem 20rem;
     justify-content: center;
+  }
+  .banner {
+    width: 100rem;
   }
 }
 @media (max-width: 1000px) {

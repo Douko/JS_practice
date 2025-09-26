@@ -18,3 +18,8 @@ img.onload = function () {
   document.body.appendChild(img);
 };
 img.src = "path/to/your/image.png";*/
+function loadPileOfImages(paths, height) {
+  for (let path of paths) {
+    loadImagesfjs(path, height);
+  }
+}

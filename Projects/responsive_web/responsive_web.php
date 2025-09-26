@@ -34,9 +34,14 @@
         <a>Contact</a>
       </div>
       <div class="item item5">
-        <div class="overlapping_child"><img height = '100px' width = '100px' /></div>
-        <div id="image_load">
-          
+        <div class="banner">
+          <div class="overlapping_child">
+            <button><img height = '100px' width = '100px' /></button>
+            <button><img height = '100px' width = '100px' /></button>
+            <div></div>
+          </div>
+          <div id="image_load">    
+          </div>
         </div>
       </div>
       <div class="item item6">
@@ -47,5 +52,8 @@
       <div class="item item7">7</div>
     </div>
   </body>
-  <?php echo loadImages($dir_image_covers, '240px'); ?>
+  <script>
+    <?php echo loadImages($dir_image_covers, '240px'); ?>
+  </script>
+  <script src="public/main.js"></script>
 </html>
