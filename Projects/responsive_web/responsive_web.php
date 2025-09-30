@@ -36,11 +36,10 @@
       <div class="item item5">
         <div class="banner">
           <div class="overlapping_child">
-            <button><img height = '100px' width = '100px' /></button>
-            <button><img height = '100px' width = '100px' /></button>
+            
             <div></div>
           </div>
-          <div id="image_load">    
+          <div id="image_load"> 
           </div>
         </div>
       </div>
@@ -53,7 +52,7 @@
     </div>
   </body>
   <script>
-    <?php echo loadImages($dir_image_covers, '240px'); ?>
+    <?php echo loadImages($dir_image_covers, '240px', 'cover', 'banner_imgs'); ?>
   </script>
   <script src="public/main.js"></script>
 </html>

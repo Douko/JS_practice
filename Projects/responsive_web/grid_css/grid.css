@@ -49,9 +49,11 @@ body {
   margin: auto;
 }
 .banner {
-  position: relative;
+  height: 240px;
+  width: 800px;
   margin: auto;
 }
+
 .overlapping_child {
   border: solid black;
   z-index: 1;
@@ -62,6 +64,13 @@ body {
 }
 .overlapping_child > * {
   background-color: transparent;
+  position: relative;
+}
+
+#image_load {
+  margin: auto;
+  height: 240px;
+  width: 700px;
   position: relative;
 }
 #image_load > img {

@@ -1,7 +1,7 @@
 <?php
 $dir_image_covers = 'public/images/covers/';
 // Crea los elementos para albergar las imagenes a cargar
-function loadImages($path, $height) {
+function loadImages($path, $height, $alt, $clase="") {
     $images = glob($path .  '*.jpg');
     /* 
     foreach($images as $image) {
@@ -12,7 +12,7 @@ function loadImages($path, $height) {
         // correctamente posicionados.
     }*/
     $stringar = implode(', ', $images);
-    echo  "loadPileOfImages('$stringar'.split(', '), '$height');";
+    echo  "loadPileOfImages('$stringar'.split(', '), '$height', '$alt', '$clase');";
 } 
 
 function printmessage() {
