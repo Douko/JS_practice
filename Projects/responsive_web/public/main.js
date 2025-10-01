@@ -54,21 +54,47 @@ bubbles.style.justifyItems = "center";
 
 function addBubble() {
   const bubble = document.createElement("div");
+  const almacen_bubble = document.createElement("div");
   bubble.style.height = "15px";
   bubble.style.width = "15px";
   bubble.style.backgroundColor = "rgba(245, 245, 245, 0.9)";
-  bubble.style.borderRadius = "15px";
+  bubble.style.borderRadius = "12px";
   bubble.style.margin = "0";
-  bubble.style.display = "inline-block";
-  bubble.style.margin = "7px";
-  bubble.style.border = "solid rgba(243, 243, 236, 0.5)";
-  return bubble;
+  almacen_bubble.style.display = "inline-block";
+  almacen_bubble.style.border = "groove rgba(245,245,245,0.85)";
+  almacen_bubble.style.borderRadius = "15px";
+  almacen_bubble.style.margin = "7px";
+  almacen_bubble.classList.add("goto_img");
+  almacen_bubble.appendChild(bubble);
+  return almacen_bubble;
 }
 //Definimos la cantidad de burbujas en la caja de burbujas
 //!probar denuevo con e.addeventlistener porque cuando
 // se hace click las burbujas ya existen dentro de la caja
 // de burbujas.
-arr_imgs.forEach((e) => bubbles.appendChild(addBubble()));
+arr_imgs.forEach((e) => {
+  const created_bubble = addBubble();
+  const burbuja = created_bubble.querySelector("div");
+
+  created_bubble.addEventListener("click", function () {
+    // insertar funcion para cambiar todos las burbujas a color
+    // por default
+
+    const pileOfBubbles = bubbles.querySelectorAll(".goto_img");
+    pileOfBubbles.forEach((e) => {
+      e.style.border = "groove rgba(245,245,245,0.85)";
+      const circulo = e.querySelector("div > *");
+      circulo.style.backgroundColor = "rgba(245, 245, 245, 0.9)";
+    });
+
+    //
+    burbuja.style.backgroundColor = "rgba(245, 245, 245, 0.5)";
+    burbuja.style.border = "none";
+    created_bubble.style.border = "groove rgba(245, 245, 245, 0.3)";
+    console.log("oola");
+  });
+  bubbles.appendChild(created_bubble);
+});
 // ahora añadimos eventlistener click a cada una de las burbujas y
 // refrescamos el resto de burbujas a su color inicial
 //append elements
