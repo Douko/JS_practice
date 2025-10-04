@@ -72,9 +72,12 @@ function addBubble() {
 //!probar denuevo con e.addeventlistener porque cuando
 // se hace click las burbujas ya existen dentro de la caja
 // de burbujas.
-arr_imgs.forEach((e) => {
+/*
+for (let i = 0; i < arr_imgs.length; i++) {
+  //usar for en vez de forEach para acceder'
+  // a los valores [i] de cada conjunto de imagenes y burbujas.
   const created_bubble = addBubble();
-  const burbuja = created_bubble.querySelector("div");
+  const burbuja = created_bubble.querySelector("div>*");
 
   created_bubble.addEventListener("click", function () {
     // insertar funcion para cambiar todos las burbujas a color
@@ -86,24 +89,55 @@ arr_imgs.forEach((e) => {
       const circulo = e.querySelector("div > *");
       circulo.style.backgroundColor = "rgba(245, 245, 245, 0.9)";
     });
-
     //
     burbuja.style.backgroundColor = "rgba(245, 245, 245, 0.5)";
     burbuja.style.border = "none";
     created_bubble.style.border = "groove rgba(245, 245, 245, 0.3)";
     console.log("oola");
+    //
   });
   bubbles.appendChild(created_bubble);
-});
+}
+*/
+arr_imgs.forEach(() => bubbles.appendChild(addBubble()));
+const pileOfBubbles = bubbles.querySelectorAll(".goto_img");
+
+//function default bubble color
+
+// function hide banner images
+
 // ahora añadimos eventlistener click a cada una de las burbujas y
 // refrescamos el resto de burbujas a su color inicial
 //append elements
+
+function addEventsInBubbles(arrayOfImages, bunchOfBubbles) {
+  for (let i = 0; i < arrayOfImages.length; i++) {
+    const burbuja = bunchOfBubbles[i].querySelector("div");
+    bunchOfBubbles[i].addEventListener("click", function () {
+      bunchOfBubbles.forEach((e) => {
+        //estilos por defecto de una burbuja no presionada
+        e.style.border = "groove rgba(245, 245,  245, 0.85)";
+        const bubble_in_e = e.querySelector("div");
+        bubble_in_e.style.backgroundColor = "rgba(245, 245,  245, 0.9)";
+      });
+      //default value of color in bubble
+      burbuja.style.backgroundColor = "rgba(245, 245, 245, 0.5)";
+      burbuja.style.border = "none";
+      bunchOfBubbles[i].style.border = "groove rgba(245, 245, 245, 0.3)";
+      //funcionalidad para cambiar de imagen al presionar burbuja
+      arrayOfImages.forEach((e) => (e.style.display = "none"));
+      arrayOfImages[i].style.display = "inline";
+    });
+  }
+}
 
 item5.appendChild(arrowRight);
 
 item5.appendChild(arrowLeft);
 
 item5.appendChild(bubbles);
+
+addEventsInBubbles(arr_imgs, pileOfBubbles);
 
 window.addEventListener("load", function () {
   console.log("La página y todos sus recursos se han cargado");
