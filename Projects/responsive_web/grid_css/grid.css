@@ -116,3 +116,37 @@ body {
   display: none;
   position: absolute;
 }
+/*Propiedades de la caja de burbujas*/
+.BubbleContainer {
+  position: absolute;
+  width: 500px;
+  height: 40px;
+  top: calc(100% - 40px);
+  left: calc(50% - 250px);
+  background-color: rgba(0, 0, 0, 0);
+  border: solid black;
+  align-content: center;
+  justify-items: center;
+}
+.BubbleBox {
+  display: inline-block;
+  border: groove rgba(245, 245, 245, 0.85);
+  border-radius: 15px;
+  margin: 7px;
+}
+.Bubble {
+  height: 15px;
+  width: 15px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 15px;
+  margin: 0;
+}
+/* Propiedades de la flecha por defecto*/
+.Arrow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  top: calc(50% - 50px);
+  border: solid black;
+}
